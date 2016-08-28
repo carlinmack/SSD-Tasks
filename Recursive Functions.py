@@ -17,7 +17,7 @@ def fibonnaci(n):
     if n == 0:
         return 0  # if the value asked for is 0, then return 0
     elif n == 1:
-        return 1  # if the value asked for is 0, then return 0
+        return 1  # if the value asked for is 1, then return 1
     else:
         return fibonnaci(n-1) + fibonnaci(n-2)  # finds the next lowest value
 
@@ -26,10 +26,12 @@ for counter in range(prompt):
 
 # Factorial - recursive
 def factorial(m):
+    if m == 0:
+        return 1
     if m == 1:
         return 1
     else:
         return factorial(m-1) * factorial(m-2)
 
-for counter in range(prompt):
-    print(factorial(counter))
+#for counter2 in range(prompt):
+print(factorial(5))
