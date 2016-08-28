@@ -22,6 +22,13 @@ def fibonnaci(n):
 for counter in range(prompt):
     print (fibonnaci(counter))  # asks it to find the counter-th term of fibonnaci
 
+# Factorial - iterative
+factTemp = 1
+for count in range(prompt+1):
+    if count != 0:
+        factTemp *= count
+print(factTemp)
+
 # Factorial - recursive
 def factorial(m):
     if m == 0:
