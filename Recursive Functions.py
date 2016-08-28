@@ -24,14 +24,13 @@ for counter in range(prompt):
 
 # Factorial - iterative
 factTemp = 1
-for count in range(prompt+1):
-    if count != 0:
-        factTemp *= count
-print(factTemp)
+for count in range(1, prompt+1): #iterates up to the total prompted
+    if count != 0: factTemp *= count  # as long as it's not zero it will multiply the temp value with the next number
+    print(factTemp)
 
 # Factorial - recursive
 def factorial(m):
-    return 1 if m == 1 else m * factorial(m-1)
+    return 1 if m == 1 else m * factorial(m-1) #uses 1 as the exit condition to start going back up
 
-for counter2 in range(1, prompt+1):
+for counter2 in range(1, prompt+1): #requests each value up to 100
     print(factorial(counter2))
