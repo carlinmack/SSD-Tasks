@@ -34,3 +34,34 @@ def factorial(m):
 
 for counter2 in range(1, prompt+1): #requests each value up to 100
     print(factorial(counter2))
+
+# Binary Search - iterative
+# init variables
+array = [1, 3, 6, 8, 10, 12, 14, 18, 22, 23, 29, 41, 44, 49, 55, 60, 71, 79, 83, 90, 99, 111, 120, 323, 478, 576, 675, 691, 930, 978]
+found = False
+start = 0
+end = len(array) - 1
+ind = 0
+term = int(input("input number to search: "))
+
+def iterativeBinarySearch():
+    while start <= end and found == False:
+        mid = (start+end)//2
+        print(mid, array[mid])
+        if array[mid] == term:
+            found = True
+            ind = mid
+        elif array[mid] < term:
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    if found == True:
+        print("found at index: " + str(ind))
+
+iterativeBinarySearch()
+
+# Binary Search - Recursive
+def recursiveBinarySearch():
+
+recursiveBinarySearch()
