@@ -20,7 +20,7 @@ def fibonnaci(n):
         return fibonnaci(n-1) + fibonnaci(n-2)  # finds the next lowest value
 
 for counter in range(prompt):
-    print (fibonnaci(counter))  # asks it to find the counter-th term of fibonnaci
+    print(fibonnaci(counter))  # asks it to find the counter-th term of fibonnaci
 
 # Factorial - iterative
 factTemp = 1
@@ -30,21 +30,21 @@ for count in range(1, prompt+1): #iterates up to the total prompted
 
 # Factorial - recursive
 def factorial(m):
-    return 1 if m == 1 else m * factorial(m-1) #uses 1 as the exit condition to start going back up
+    return 1 if m == 1 else m * factorial(m-1)  # uses 1 as the exit condition to start going back up
 
-for counter2 in range(1, prompt+1): #requests each value up to 100
+for counter2 in range(1, prompt+1):  # requests each value up to 100
     print(factorial(counter2))
 
 # Binary Search - iterative
 # init variables
 array = [1, 3, 6, 8, 10, 12, 14, 18, 22, 23, 29, 41, 44, 49, 55, 60, 71, 79, 83, 90, 99, 111, 120, 323, 478, 576, 675, 691, 930, 978]
-found = False
-start = 0
-end = len(array) - 1
-ind = 0
 term = int(input("input number to search: "))
 
 def iterativeBinarySearch():
+    found = False
+    start = 0
+    end = len(array) - 1
+    ind = 0
     while start <= end and found == False:
         mid = (start+end)//2
         print(mid, array[mid])
@@ -62,6 +62,13 @@ def iterativeBinarySearch():
 iterativeBinarySearch()
 
 # Binary Search - Recursive
-def recursiveBinarySearch():
+def recursiveBinarySearch(begin, final):
+    mid = (begin + final) // 2
+    if array[mid] == term:
+        return "found at index" + str(mid)
+    elif array[mid] < term:
+        recursiveBinarySearch(mid+1, final)
+    else:
+        recursiveBinarySearch(begin, mid-1)
 
-recursiveBinarySearch()
+print(recursiveBinarySearch(0, len(array)))
