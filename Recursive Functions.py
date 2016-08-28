@@ -14,10 +14,8 @@ for counter in range(prompt-1):  # iterates until it reaches the range
 
 # Fibonacci - recursion
 def fibonnaci(n):
-    if n == 0:
-        return 0  # if the value asked for is 0, then return 0
-    elif n == 1:
-        return 1  # if the value asked for is 1, then return 1
+    if n < 2:
+        return n  # if the value asked for is 0 or 1, return them
     else:
         return fibonnaci(n-1) + fibonnaci(n-2)  # finds the next lowest value
 
