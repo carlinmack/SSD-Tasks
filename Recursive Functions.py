@@ -31,12 +31,7 @@ print(factTemp)
 
 # Factorial - recursive
 def factorial(m):
-    if m == 0:
-        return 1
-    if m == 1:
-        return 1
-    else:
-        return factorial(m-1) * factorial(m-2)
+    return 1 if m == 1 else m * factorial(m-1)
 
-#for counter2 in range(prompt):
-print(factorial(5))
+for counter2 in range(1, prompt+1):
+    print(factorial(counter2))
