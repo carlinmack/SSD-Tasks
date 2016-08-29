@@ -14,7 +14,7 @@ array = [5, 3, 10, 24, 26, 1, 7]
 # Selection
 for k in range(len(array)):
     minVal = k
-    for j in range(1, len(array)):
+    for j in range(k+1, len(array)):
         if array[minVal] > array[j]:
             minVal = j
     temp = array[k]
