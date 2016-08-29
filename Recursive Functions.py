@@ -47,7 +47,6 @@ def iterativeBinarySearch():
     ind = 0
     while start <= end and found == False:
         mid = (start+end)//2
-        print(mid, array[mid])
         if array[mid] == term:
             found = True
             ind = mid
@@ -58,6 +57,8 @@ def iterativeBinarySearch():
 
     if found == True:
         print("found at index: " + str(ind))
+    else:
+        print("item not found")
 
 iterativeBinarySearch()
 
@@ -65,10 +66,10 @@ iterativeBinarySearch()
 def recursiveBinarySearch(begin, final):
     mid = (begin + final) // 2
     if array[mid] == term:
-        return "found at index" + str(mid)
+        return "found at index: " + str(mid)
     elif array[mid] < term:
-        recursiveBinarySearch(mid+1, final)
+        return recursiveBinarySearch(mid+1, final)
     else:
-        recursiveBinarySearch(begin, mid-1)
+        return recursiveBinarySearch(begin, mid-1)
 
-print(recursiveBinarySearch(0, len(array)))
+#print(recursiveBinarySearch(0, len(array)))
