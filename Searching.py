@@ -25,7 +25,7 @@ for k in range(len(array)):
     array[minVal] = temp
 print(array)
 
-# Bubble
+# Bubble Sort
 array = list(initArray)
 swap = True
 while swap:
@@ -39,6 +39,19 @@ while swap:
 print(array)
 
 # Quick Sort
+array = list(initArray)
+def quickSort(begin, end):
+    start = begin
+    fin = end
+    pivot = (start + fin) // 2
+    for m in range(pivot):
+        start += m
+        fin -= m
+        if array[start] > array[fin]:
+            temp = array[start]
+            array[start] = array[fin]
+            array[fin] = temp
+    print(array)
 
-
+quickSort(0, len(array))
 print(initArray)
