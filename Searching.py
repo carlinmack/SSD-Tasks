@@ -44,12 +44,11 @@ def quickSort(begin, end):
     pivot = (begin + end) // 2
     for m in range(pivot):
         begin += m
-        fin -= m
+        end -= m
         if array[begin] > array[end]:
             temp = array[begin]
             array[begin] = array[end]
             array[end] = temp
-    print(array)
 
-quickSort(0, len(array))
+quickSort(0, len(array)-1)
 print(initArray)
