@@ -41,16 +41,14 @@ print(array)
 # Quick Sort
 array = list(initArray)
 def quickSort(begin, end):
-    start = begin
-    fin = end
-    pivot = (start + fin) // 2
+    pivot = (begin + end) // 2
     for m in range(pivot):
-        start += m
+        begin += m
         fin -= m
-        if array[start] > array[fin]:
-            temp = array[start]
-            array[start] = array[fin]
-            array[fin] = temp
+        if array[begin] > array[end]:
+            temp = array[begin]
+            array[begin] = array[end]
+            array[end] = temp
     print(array)
 
 quickSort(0, len(array))
