@@ -6,9 +6,9 @@ for l in range(1, len(array)):
     index = l
     value = array[l]
     while index > 0 and value < array[index-1]:
-        temp = array[l]
-        array[l] = array[l-1]
-        array[l-1] = temp
+        temp = array[index]
+        array[index] = array[index-1]
+        array[index-1] = temp
         index -= 1
 
 # Selection
