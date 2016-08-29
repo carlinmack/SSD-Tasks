@@ -64,14 +64,14 @@ iterativeBinarySearch()
 
 # Binary Search - Recursive
 def recursiveBinarySearch(begin, final):
-    if begin <= final:
-        mid = (begin + final) // 2
+    if begin <= final:  # if there are still terms to search
+        mid = (begin + final) // 2  # evaluates the index to search
         if array[mid] == term:
-            return "found at index: " + str(mid)
+            return "found at index: " + str(mid)  # if it is the middle value return to user
         elif array[mid] < term:
-            return recursiveBinarySearch(mid+1, final)
+            return recursiveBinarySearch(mid+1, final)  # else if it is smaller search in the section below
         else:
-            return recursiveBinarySearch(begin, mid-1)
+            return recursiveBinarySearch(begin, mid-1)  # if bigger then search in the section above
     else:
         return "item not found"
 print(recursiveBinarySearch(0, len(array)))
