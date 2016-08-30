@@ -24,7 +24,7 @@ for counter in range(prompt):
 
 # Factorial - iterative
 factTemp = 1
-for count in range(1, prompt+1): #iterates up to the total prompted
+for count in range(1, prompt+1):  # iterates up to the total prompted
     if count != 0: factTemp *= count  # as long as it's not zero it will multiply the temp value with the next number
     print(factTemp)
 
@@ -55,7 +55,7 @@ def iterativeBinarySearch():
         else:
             end = mid - 1
 
-    if found == True:
+    if found:
         print("found at index: " + str(ind))
     else:
         print("item not found")
