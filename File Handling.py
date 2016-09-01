@@ -39,15 +39,19 @@ def inputDictionaries(bikeDictionary):
             Price = items[3]
 
             bikeDictionary.append({"Model": Model, "Gears": Gears, "Type": Type, "Price": Price})
-
+            print(bikeDictionary)
             line = readFile.readline().rstrip("\n")
     return bikeDictionary
-
-bikeClasses = []
-bikeDictionary = []
 
 inputDictionaries(bikeDictionary)
 inputClasses(bikeClasses)
 
-print(bikeDictionary)
-print(bikeClasses)
+# Display Dictionary
+def displayDict():
+    for k in range(len(bikeDictionary)):
+        temp = ""
+        for l in range(len(bikeDictionary[k])):
+            temp += (bikeDictionary[k+1][l] + " ")
+        print(temp)  # output
+
+displayDict()
