@@ -45,13 +45,10 @@ def inputDictionaries(bikeDictionary):
 
 inputDictionaries(bikeDictionary)
 inputClasses(bikeClasses)
+print(bikeDictionary[0].values())
+# # Display Dictionary
+# def displayDict():
+#     for k in bikeDictionary:
+#         print(bikeDictionary[k].values())  # output
 
-# Display Dictionary
-def displayDict():
-    for k in range(len(bikeDictionary)):
-        temp = ""
-        for l in range(len(bikeDictionary[k])):
-            temp += (bikeDictionary[k+1][l] + " ")
-        print(temp)  # output
-
-displayDict()
+# displayDict()
