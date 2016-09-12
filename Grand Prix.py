@@ -38,18 +38,21 @@ def assignPoints():
     driverDictionary[1]["Points"] = 18
     driverDictionary[2]["Points"] = 15
 
-def displayValues():
-    print("Driver".ljust(22) + "Team".ljust(15) +"Time".ljust(10) + "Points".ljust(10))
+def writeValues():
+    temp = "Driver".ljust(22) + "Team".ljust(15) +"Time".ljust(10) + "Points".ljust(10)
     for j in range(len(driverDictionary)):
-        temp = driverDictionary[j]["Driver"].ljust(22)
+        temp += driverDictionary[j]["Driver"].ljust(22)
         temp += driverDictionary[j]["Team"].ljust(15)
         temp += str(driverDictionary[j]["Time"]).ljust(10)
         temp += str(driverDictionary[j]["Points"]).ljust(10)
-        print(temp)
+
+    with open("newfile.txt", "a") as writeFile:
+        writeFile.write(temp)
+        print("File updated!")
     
 # -------Main-------
 inputDictionaries(driverDictionary)
 userInput()
 sortDrivers()
 assignPoints()
-displayValues()
+writeValues()
